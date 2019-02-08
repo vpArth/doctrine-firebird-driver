@@ -350,7 +350,7 @@ class Statement implements \IteratorAggregate, StatementInterace
      * @param null|string $optArg1
      * @return mixed
      */
-    public function fetch($fetchMode = null, $optArg1 = null)
+    public function fetch($fetchMode = NULL, $optArg1 = PDO::FETCH_ORI_NEXT, $cursorOffset = 0)
     {
         $fetchMode !== null || $fetchMode = $this->defaultFetchMode;
         switch ($fetchMode) {
