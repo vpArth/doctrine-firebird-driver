@@ -88,8 +88,8 @@ class Connection implements ConnectionInterface, ServerInfoAwareConnection
 
         $this->connectString = self::generateConnectString($params);
         $this->isPersistent = self::DEFAULT_IS_PERSISTENT;
-        if (isset($params['isPersistent']) && is_bool($params['isPersistent'])) {
-            $this->isPersistent = $params['isPersistent'];
+        if (isset($params['persitent']) && is_bool($params['persitent'])) {
+            $this->isPersistent = $params['persitent'];
         }
         $this->charset = self::DEFAULT_CHARSET;
         if (isset($params['charset']) && is_string($params['charset']) && $params['charset']) {
